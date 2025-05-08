@@ -13,18 +13,18 @@ pip install virtualenv
 3. Tạo môi trường ảo:
 
 ```bash
-virtualenv venv
+python3 -m venv .venv
 ```
 
 4. Kích hoạt môi trường ảo:
 
 - Trên Linux/macOS:
   ```bash
-  source venv/bin/activate
+  source .venv/bin/activate
   ```
 - Trên Windows:
   ```cmd
-  venv\Scripts\activate
+  .venv\Scripts\activate
   ```
 
 5. Cài đặt các thư viện cần thiết:

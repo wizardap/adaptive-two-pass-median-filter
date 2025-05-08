@@ -1,7 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import cv2
-from utils import * 
+from utils_optimizer import * 
 
 def calculate_mse(original, filtered):
     """Calculate Mean Squared Error between two images"""
@@ -87,7 +87,7 @@ if __name__ == "__main__":
     ]
     
     # Different noise levels to test
-    noise_levels = np.linspace(0.10, 0.3, 3)  # 10% to 99% noise
+    noise_levels = np.linspace(0.10, 0.9, 100)  # 10% to 99% noise
     
     # Generate the plots
     plot_error_metrics(image_paths, noise_levels)

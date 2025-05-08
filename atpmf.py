@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 import matplotlib.pyplot as plt
-from utils import *
+from utils_optimizer import *
 
 
 
@@ -19,7 +19,7 @@ if __name__ == "__main__":
     noisy_image = add_salt_and_pepper_noise(original_image, q=NOISE_RATIO)
     
     # Bộ lọc trung vị tiêu chuẩn
-    ksize = 5
+    ksize = 3
     standard_median = median_filter(noisy_image, ksize)
     
     # Bộ lọc trung vị hai lần

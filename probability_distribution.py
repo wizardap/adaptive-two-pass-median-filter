@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 from scipy.ndimage import median_filter
 from scipy import stats
 import cv2
-from utils import add_salt_and_pepper_noise
+from utils_optimizer import add_salt_and_pepper_noise
 # Set random seed for reproducibility
 np.random.seed(42)
 
@@ -11,7 +11,7 @@ X = cv2.imread('standard-test-images/STI/Classic/lenna.ppm', cv2.IMREAD_GRAYSCAL
 M, N = X.shape[:2]  # Số hàng M, số cột N
 
 # Create noisy image Y with salt-and-pepper noise
-Y = add_salt_and_pepper_noise(X, noise_ratio=0.5)  # 10% noise
+Y = add_salt_and_pepper_noise(X,0.15)  # 10% noise
 
 # Step 2: Apply 3x3 median filter to detect noise
 Z = median_filter(Y, size=3, mode='constant', cval=0)  # Apply median filter
